@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'orders',                             # Приложение для работы с заказами (корзина, оплата)
 
     'rest_framework',                     # Подключение Django REST Framework
-    'rest_framework_simplejwt',           # Поддержка JWT-аутентификации
     'drf_spectacular',                    # Генератор документации OpenAPI
     'django_filters',                     # Фильтр данных
     'django_cleanup.apps.CleanupConfig',
@@ -154,7 +153,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Настройки для Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',   # JWT аутентификация
         'rest_framework.authentication.SessionAuthentication',         # Сессионная аутентификация для браузера
     ),
     'DEFAULT_FILTER_BACKENDS': (
